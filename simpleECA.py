@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def generate(rule, generation):
+def generateECA(rule, generation):
     
     #Convert base10 rule to binary
     rule = '{0:08b}'.format(rule)
@@ -80,7 +80,7 @@ def mainMenu():
             generation = int(input("Enter generations to run (n rows, 2n columns): "))
         except:
             generation = -1
-    eca = generate(rule, generation)
+    eca = generateECA(rule, generation)
 
     eca = np.array(eca)
     #print(eca)
