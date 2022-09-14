@@ -1,8 +1,6 @@
 # Simple ECA
 ## A simple tool to generate graphics of elementary cellular automata
 
-<br>
-
 ### Requirements
 ``` 
 numpy
