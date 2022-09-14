@@ -10,6 +10,7 @@ def mainMenu():
     print("")
     print("")
 
+    #Get rules and generations
     while (rule < 0) or (rule > 255):
         try:
             rule = int(input("Enter rule number: "))
