@@ -65,7 +65,7 @@ def mainMenu():
     print("███████ ██ ██ ████ ██ ██████  ██      █████       █████   ██      ███████") 
     print("     ██ ██ ██  ██  ██ ██      ██      ██          ██      ██      ██   ██") 
     print("███████ ██ ██      ██ ██      ███████ ███████     ███████  ██████ ██   ██")
-    print("                    Easy tool for generating Elementary Cellular Automata")
+    print("           Easy tool for generating Elementary Cellular Automata graphics")
     print("")
     print("")
 
