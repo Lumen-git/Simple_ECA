@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
 def generate(rule, generation):
     
     #Convert base10 rule to binary
@@ -34,22 +37,22 @@ def generate(rule, generation):
             else: 
                 neighborhood = [eca[i-1][j-1], eca[i-1][j], eca[i-1][j+1]]
             #Match to rules
-                if (neighborhood ==[1,1,1]):
-                    eca[i][j] = a
-                if (neighborhood ==[1,1,0]):
-                    eca[i][j] = b
-                if (neighborhood ==[1,0,1]):
-                    eca[i][j] = c
-                if (neighborhood ==[1,0,0]):
-                    eca[i][j] = d
-                if (neighborhood ==[0,1,1]):
-                    eca[i][j] = e
-                if (neighborhood ==[0,1,0]):
-                    eca[i][j] = f
-                if (neighborhood ==[0,0,1]):
-                    eca[i][j] = g
-                if (neighborhood ==[0,0,0]):
-                    eca[i][j] = h
+            if (neighborhood ==[1,1,1]):
+                eca[i][j] = a
+            if (neighborhood ==[1,1,0]):
+                eca[i][j] = b
+            if (neighborhood ==[1,0,1]):
+                eca[i][j] = c
+            if (neighborhood ==[1,0,0]):
+                eca[i][j] = d
+            if (neighborhood ==[0,1,1]):
+                eca[i][j] = e
+            if (neighborhood ==[0,1,0]):
+                eca[i][j] = f
+            if (neighborhood ==[0,0,1]):
+                eca[i][j] = g
+            if (neighborhood ==[0,0,0]):
+                eca[i][j] = h
     return eca
 
 
@@ -78,7 +81,12 @@ def mainMenu():
         except:
             generation = -1
     eca = generate(rule, generation)
+
+    eca = np.array(eca)
+    #print(eca)
     
+    plt.imshow(eca, cmap="gray_r") 
+    plt.show()
 
 if __name__ == "__main__":
     mainMenu()
